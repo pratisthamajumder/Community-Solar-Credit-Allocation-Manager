@@ -1,5 +1,4 @@
 # Community-Solar-Credit-Allocation-Manager
-# Community Solar Credit Allocation Manager
 
 ## Problem Statement #63 — Sustainability & Green Tech
 
