@@ -1,0 +1,33 @@
+@startuml
+title Community Solar Credit Allocation Manager - UML Component Diagram
+
+skinparam componentStyle uml2
+skinparam shadowing false
+
+component "Prosumer Portal / UI" as UI
+component "Order Manager" as OM
+component "Payment Service" as PS
+component "Smart Meter Data Service" as SMDS
+database "Solar Credit Database" as DB
+
+interface "Credit Transfer API" as CTA
+interface "Payment Processing API" as PPA
+interface "Meter Telemetry API" as MTA
+interface "Credit / Account API" as CAA
+interface "Billing Data API" as BDA
+
+UI - CTA
+CTA - OM
+OM - CAA
+CAA - DB
+
+UI - PPA
+PPA - PS
+UI - BDA
+BDA - PS
+
+SMDS - MTA
+MTA - DB
+OM - DB
+PS - DB
+@enduml
